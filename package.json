@@ -1,0 +1,55 @@
+{
+  "name": "@atomic-package/core",
+  "version": "0.0.1",
+  "description": "atomic-package - core",
+  "main": "dist/atomic-package.js",
+  "scripts": {
+    "test": "$(npm bin)/mocha test/** -r test/spec_setup.js",
+    "test:watch": "$(npm bin)/mocha -w test/** -r test/spec_setup.js",
+    "start": "concurrently \"npm run webpack:w\" \"gulp\"",
+    "webpack": "webpack",
+    "webpack:w": "webpack --progress --colors --watch",
+    "build": "concurrently \"webpack --config ./webpack.production.config.js --progress --profile --colors\" \"gulp dist\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:atomic-package/core.git"
+  },
+  "author": "daisuke.takayama",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^7.0.14",
+    "browser-sync": "^2.18.8",
+    "chai": "^3.5.0",
+    "concurrently": "^3.4.0",
+    "cssmin": "^0.4.3",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-mocha": "^4.3.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "jsdom": "^10.0.0",
+    "path": "^0.12.7",
+    "power-assert": "^1.4.2",
+    "run-sequence": "^1.2.2",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.3.1",
+    "typings": "^2.1.1",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "@atomic-package/dropdown": "0.0.1",
+    "@atomic-package/modal-window": "0.0.3",
+    "@atomic-package/scrollspy": "0.0.1",
+    "@atomic-package/side-menu": "0.0.1",
+    "@atomic-package/smooth-scroll": "0.0.1",
+    "@atomic-package/switcher": "0.0.1",
+    "@atomic-package/tab": "0.0.4",
+    "@atomic-package/toggle": "0.0.1"
+  }
+}
