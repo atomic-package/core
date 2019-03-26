@@ -4,7 +4,7 @@
 
 ## Includes Module List
 
-- [tween]([https://github.com/atomic-package/tween)
+- [tween](https://github.com/atomic-package/tween)
 - [tab](https://github.com/atomic-package/tab)
 - [dropdown](https://github.com/atomic-package/dropdown)
 - [side-menu](https://github.com/atomic-package/side-menu)
